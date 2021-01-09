@@ -192,7 +192,7 @@ namespace vu2_V1
                     string info = element.Text;
                     element = cdriver.FindElement(By.XPath($"/html/body/div[2]/div[3]/div/div/div/section[2]/aside/section[3]/div/div/div[1]/div[2]/div/div/div[1]/div/div/div[2]/div/div[1]/div/div/h5"));
                     string date = element.Text;
-                    await TlBot.SendTextMessageAsync("258924413", $"{name}\n{info}\n{date}");
+                    await TlBot.SendTextMessageAsync("myid", $"{name}\n{info}\n{date}");
 
                     //element = cdriver.FindElement(By.XPath($"/html/body/div[2]/div[3]/div/div/div/section[2]/aside/section[6]/div/div/div[1]/div/div[{i}]/div"));
                     //string
@@ -208,7 +208,7 @@ namespace vu2_V1
                             string info = element.Text;
                             element = cdriver.FindElement(By.XPath($"/html/body/div[2]/div[3]/div/div/div/section[2]/aside/section[6]/div/div/div[1]/div/div[{i}]/div/a"));
                             string date = element.Text;
-                            await TlBot.SendTextMessageAsync("258924413", $"{name}\n{info}\n{date}");
+                            await TlBot.SendTextMessageAsync("myid", $"{name}\n{info}\n{date}");
 
                             //element = cdriver.FindElement(By.XPath($"/html/body/div[2]/div[3]/div/div/div/section[2]/aside/section[6]/div/div/div[1]/div/div[{i}]/div"));
                             //string
