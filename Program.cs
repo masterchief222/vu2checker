@@ -29,7 +29,7 @@ namespace vu2_V1
             COption.AddArgument("headless");
             var me = await TlBot.GetMeAsync();
             Console.Title = me.Username;
-            //scrape_vu_homework("", "");
+            //scrape_vu_homework("myusername", "mypassword");
             TlBot.StartReceiving();
 
 
@@ -85,7 +85,7 @@ namespace vu2_V1
             {
                 try
                 {
-                    await TlBot.SendTextMessageAsync("258924413", e.Message.Text);
+                    await TlBot.SendTextMessageAsync("myid", e.Message.Text);
                     var sender_info = e.Message.Text.Split('\n');
                     try
                     {
@@ -99,13 +99,13 @@ namespace vu2_V1
                     catch (Exception ex)
                     {
                         await TlBot.SendTextMessageAsync(e.Message.Chat.Id, "please send in correct form");
-                        await TlBot.SendTextMessageAsync("258924413", e.Message.Chat.Username + "\n" + ex.Message);
+                        await TlBot.SendTextMessageAsync("myid", e.Message.Chat.Username + "\n" + ex.Message);
                     }
                 }
                 catch(Exception ex)
                 {
                     await TlBot.SendTextMessageAsync(e.Message.Chat.Id, "please send in correct form");
-                    await TlBot.SendTextMessageAsync("258924413", e.Message.Chat.Username + "\n" + ex.Message);
+                    await TlBot.SendTextMessageAsync("myid", e.Message.Chat.Username + "\n" + ex.Message);
                 }
 
             }
@@ -151,7 +151,7 @@ namespace vu2_V1
                 {
                     all_lesson = $"No of lesson:{i - 1}\n{all_lesson}";
                     await TlBot.SendTextMessageAsync(id, all_lesson);
-                    await TlBot.SendTextMessageAsync("258924413", $"{name}\n{all_lesson}");
+                    await TlBot.SendTextMessageAsync("myid", $"{name}\n{all_lesson}");
                     break;
                 }
             } 
