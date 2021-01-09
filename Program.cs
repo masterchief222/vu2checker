@@ -24,7 +24,7 @@ namespace vu2_V1
         public static string name;
         static async Task Main(/*string[] args*/)
         {
-            TlBot = new TelegramBotClient("1323191477:AAEHnUWD4jYAoq2CGBb5mkv1tWiQ-q3gRPs");
+            TlBot = new TelegramBotClient("token");
             COption = new ChromeOptions();
             COption.AddArgument("headless");
             var me = await TlBot.GetMeAsync();
