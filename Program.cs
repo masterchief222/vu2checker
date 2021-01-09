@@ -29,7 +29,7 @@ namespace vu2_V1
             COption.AddArgument("headless");
             var me = await TlBot.GetMeAsync();
             Console.Title = me.Username;
-            //scrape_vu_homework("9812223352", "masterchif");
+            //scrape_vu_homework("", "");
             TlBot.StartReceiving();
 
 
