@@ -109,10 +109,7 @@ namespace vu2_V1
                 }
 
             }
-            else
-            {
-                await TlBot.SendTextMessageAsync(e.Message.Chat.Id, "جان من فقط متن بفرست");
-            }
+
         }
         static async Task SendReplyKeyboard(Message message)
         {
